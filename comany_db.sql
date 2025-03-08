@@ -1,5 +1,3 @@
--- implemented DDl,DML,TCL and DCL Commands
-
 CREATE DATABASE company_db;
 USE company_db;
 
@@ -17,6 +15,23 @@ VALUES
 ('Arnav', 'Analyst', 50000.00);
 
 SET SQL_SAFE_UPDATES = 0;
+
+-- DDL commands
+ALTER TABLE employees ADD COLUMN emp_hire_date DATE;
+
+ALTER TABLE employees MODIFY COLUMN emp_name VARCHAR(100);
+
+ALTER TABLE employees CHANGE COLUMN emp_role job_title VARCHAR(50);
+
+RENAME TABLE employees TO staff;
+
+ALTER TABLE staff DROP COLUMN emp_hire_date;
+
+TRUNCATE TABLE staff;
+
+DROP TABLE staff;
+
+Select * from staff;
 
 -- dml update--   
 UPDATE employees 
@@ -40,7 +55,6 @@ FLUSH PRIVILEGES;
 
 -- transaction (TCL)
 START TRANSACTION;
-
 -- Insert a new employee (dml + tcl)
 INSERT INTO employees (emp_name, emp_role, emp_salary) 
 VALUES ('David', 'HR', 45000.00);
@@ -49,7 +63,7 @@ VALUES ('David', 'HR', 45000.00);
  SAVEPOINT before_delete;
  
  -- Delete  record (DML)
-DELETE FROM employees WHERE emp_name = 'Davidd';
+DELETE FROM employees WHERE emp_name = 'Rakesh';
  
 --  Rollback tcl
 ROLLBACK TO before_delete;
