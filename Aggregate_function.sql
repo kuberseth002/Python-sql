@@ -21,28 +21,26 @@ INSERT INTO teacher(teach_id,teach_name,teach_role,teach_salary,teach_hire_date)
 (4,'Kabir Khan', 'Computer Science Teacher', 65000.00, '2021-05-25'),
 (5,'Punnet singh', 'English Teacher', 50000.00, '2017-03-12');
 
-S-- ELECT COUNT(*) AS total_teachers FROM teacher;
+SELECT COUNT(*) AS total_teachers FROM teacher;
 
--- SELECT ROUND(AVG(teach_salary)) AS avg_salary FROM teacher;
+SELECT ROUND(AVG(teach_salary)) AS avg_salary FROM teacher;
 
--- SELECT MAX(teach_salary) AS highest_salary FROM teacher;
+SELECT MAX(teach_salary) AS highest_salary FROM teacher;
 
--- SELECT MIN(teach_salary) AS lowest_salary FROM teacher;
+SELECT MIN(teach_salary) AS lowest_salary FROM teacher;
 
--- SELECT SUM(teach_salary) AS total_salary FROM teacher;
+SELECT SUM(teach_salary) AS total_salary FROM teacher;
 
--- SELECT COUNT(*) AS total_math_teachers FROM teacher WHERE teach_role = 'Mathematics Teacher';
+SELECT COUNT(*) AS total_math_teachers FROM teacher WHERE teach_role = 'Mathematics Teacher';
 
--- SELECT AVG(teach_salary) AS avg_science_teacher_salary FROM teacher WHERE teach_role = 'Science Teacher';
+SELECT AVG(teach_salary) AS avg_science_teacher_salary FROM teacher WHERE teach_role = 'Science Teacher';
 
--- SELECT SUM(teach_salary) AS total_cs_teacher_salary FROM teacher WHERE teach_role = 'Computer Science Teacher';
+SELECT SUM(teach_salary) AS total_cs_teacher_salary FROM teacher WHERE teach_role = 'Computer Science Teacher';
 
--- SELECT MAX(teach_salary) - MIN(teach_salary) AS salary_difference FROM teacher;
+SELECT MAX(teach_salary) - MIN(teach_salary) AS salary_difference FROM teacher;
 
--- SELECT COUNT(DISTINCT teach_role) AS unique_subjects FROM teacher;
+SELECT COUNT(DISTINCT teach_role) AS unique_subjects FROM teacher;
 
-
-dslkcmdkc
 
 
 
